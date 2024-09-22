@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>AI Dessert Recipe Gernerator</title>
 </head>
@@ -13,14 +14,18 @@
     </header>
 
     <main>
-        <form>
-<input type="text" placeholder="Enter your choice of dessert here!" autofocus required autocomplete="off" class="instructions"/>
+        <form id="recipe-generater-form">
+<input type="text" 
+placeholder="Enter your choice of dessert here!" 
+autofocus required 
+autocomplete="off" 
+class="instructions"
+/>
 <input type="submit" class="submit-button"/>
   </form>
-  <div class="answer">
-    The poem will go here
-  </div>
+  <div class="recipe" id="recipe"></div>
     </main>
+
     <footer> 
         This AI project was codes by 
         <a href="https://github.com/Rirish23" target="_blank">Richelle Irish </a> and 
@@ -29,7 +34,8 @@
             href="http://github.com/Rirish23/Dessert-Recipe-Generator" 
             target="_blank"
             >
-            open-sourced on GitHub </a> 
+            open-sourced on GitHub </a
+            > 
             
             and is 
             <a href="https://dessertrecpeai.netlify.app/"target="_blank"
@@ -37,6 +43,7 @@
           >.
         </footer>
     </div>
-    <script scr="src/index.js"></script>  
+    <script src="src/index.js"></script> 
+
 </body>
 </html>
