@@ -18,10 +18,13 @@ let prompt = `User instructions: Generat a dessert recipe with ${instructionInpu
 let context ="You are a chef expert and love to share tasty dessert recipes. Your mission is to generate a list of ingredients and step-by-step instructions about how to make the dessert in basic HTML and seperate each line with a <br/>. Make sure to follow the user instructions below. Do not include ```html. Sige the recipe with `SheCodes AI` inside a <strong> element. ";
 let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+let poemElement = document.querySelector("#recipe");
+poemElement.classList.remove("hidden");
+poemElement.innerHTML = `<div class="generating">⏳ Generating A Recipe For ${instructionInput.value}</div>`;
 
 axios.get(apiURL).then(displayRecipe);
 }
 
 
-  let recipeFormElement = document.querySelector("#recipe-generater-form");
-  recipeFormElement.addEventListener("submit", generateRecipe);
+let poemFormElement = document.querySelector("#recipe-generator-form");
+poemFormElement.addEventListener("submit", generateRecipe);

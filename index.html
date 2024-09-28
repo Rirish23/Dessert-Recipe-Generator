@@ -15,7 +15,8 @@
     </header>
 
     <main>
-        <form id="recipe-generater-form">
+        <div class="form-container">
+        <form id="recipe-generator-form">
 <input type="text" 
 placeholder="Enter your choice of dessert here!" 
 autofocus required 
@@ -23,9 +24,12 @@ autocomplete="off"
 class="instructions"
 id="user-instructions"
 />
-<input type="submit" class="submit-button"/>
-  </form>
-  <div class="recipe" id="recipe"></div>
+<input type="submit" class="submit-button" />
+</form>
+<div class="hint">i.e: Apple Pie, Cookies, Cheescake, etc</div>
+</div>
+
+  <div class="recipe hidden" id="recipe"></div>
     </main>
 
     <footer> 
